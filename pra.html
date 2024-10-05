@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympics Games 2024 Paris</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E6F7FF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .header .title {
+            text-align: left;
+        }
+
+        .header img {
+            width: 100px; /* Adjust the width as needed */
+            height: auto;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #000;
+            margin: 0;
+        }
+
+        h2 {
+            color: #000;
+            margin-top: 10px;
+        }
+
+        .highlights {
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white; /* Ensures table background color is white */
+        }
+
+        table, th, td {
+            border: 1px solid #007BFF;
+            background-color: white; /* Ensures table cells have white background */
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: #FFF;
+        }
+
+        .survey-form {
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        .survey-form input[type="text"],
+        .survey-form input[type="email"],
+        .survey-form input[type="tel"],
+        .survey-form input[type="date"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #CCC;
+            font-size: 14px;
+        }
+
+        .survey-form label {
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .survey-form input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .survey-form .gender-group {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .survey-form .gender-group label {
+            margin: 0 10px 0 5px;
+        }
+
+        .survey-form input[type="radio"],
+        .survey-form input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .survey-form select {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #CCC;
+        }
+
+        .survey-form button {
+            width: 50%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .survey-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .survey-form .reset {
+            background-color: #0056b3;
+            width: 50%;
+            cursor: pointer;
+        }
+
+        .survey-form .reset:hover {
+            background-color: #247ec4;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <h1>Olympics Games 2024 Paris</h1>
+            <h2>Olympics Games 2024 Highlights</h2>
+        </div>
+        <img src="paris.PNG" alt="Paris 2024 Logo">
+    </div>
+
+    <div class="container">
+        <div class="highlights">
+            <table>
+                <tr>
+                    <th colspan="2">Event</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Opening Ceremony</td>
+                    <td>Main Stadium</td>
+                    <td>26 July 2024</td>
+                    <td>Paris, France</td>
+                </tr>
+                <tr>
+                    <td>Beach Events</td>
+                    <td>27 July 2024</td>
+                    <td>Nice, France</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Closing Ceremony</td>
+                    <td>11 August 2024</td>
+                    <td>Paris, France</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Survey Form</h3>
+        <div class="survey-form">
+            <form onsubmit="disp(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" maxlength="10" minlength="10" required>
+
+                <div class="gender-group">
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+
+                <label for="event">Favorite Event:</label>
+                <select id="event" name="event">
+                    <option value="" disabled selected>Select an event</option>
+                    <option value="ceremony">Swimming</option>
+                    <option value="beach">Hockey</option>
+                    <option value="closing">Badminton</option>
+                </select>
+
+                <label for="date">Preferred Date for Attending:</label>
+                <input type="date" id="date" name="date">
+
+                <label>
+                    <input type="checkbox" name="terms" required> I agree to the terms and conditions
+                </label>
+
+                <button type="submit">Submit</button>
+                <button type="reset" class="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function disp(event) {
+            event.preventDefault();  // Prevent form submission
+            const name = document.getElementById('name').value;
+            alert("Thank you, your form was successfully submitted, " + name + "!");
+        }
+    </script>
+</body>
+</html>
+
